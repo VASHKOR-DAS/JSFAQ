@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Event Management</title>
+</head>
+<body>
+    <h1>Exploreing Events</h1>
+
+
+    <button>click me -1</button>
+
+    <button id="second">click me -2</button>
+    <!-- 
+        inspect console
+        document.getElementById('second') -->
+    <button id="third">click me -3</button>
+
+    <button id="fourth">click me -4</button>
+
+    <button id="fifth">click me -5</button>
+
+    <script>
+        //id diyeo kaj kora jay
+        const secondButton = document.getElementById('second');
+        secondButton.onclick = function name() {
+         console.log('second click');
+        }
+
+
+
+        //function declare koreo kaj kora jay
+        function changeBG() {
+            document.body.style.backgroundColor = 'cyan';
+        }
+
+        const thirdButton = document.getElementById('third');
+        thirdButton.onclick = changeBG;
+
+        //modern way
+        function changeBG2() {
+            document.body.style.backgroundColor = 'tomato';
+        }
+
+
+        const fourthButton = document.getElementById('fourth');
+        fourthButton.addEventListener('click', changeBG2)
+
+
+        //other way
+        document.getElementById('fifth').addEventListener('click', function () {
+         document.body.style.color = 'Purple';
+        })
+        //jehetu ai function nai to atake bole "Annonymous Function"
+
+
+    </script>
+
+</body>
+</html>
