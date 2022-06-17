@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Remove when click</title>
+</head>
+
+<body>
+    <div id="container">
+
+        <h1>My List</h1>
+
+        <ul id="myList">
+
+            <li id="first" class="item">Lorem, ipsum dolor.</li>
+
+            <li id="second" class="item">Tenetur, nisi beatae.</li>
+
+            <li class="item">Aliquid, ea aspernatur.</li>
+
+            <li class="item">Impedit, culpa quas?</li>
+
+            <li class="item">Magni, deleniti eum.</li>
+        </ul>
+        <button id="addNew">Add New Item</button>
+    </div>
+
+
+    <script>
+        /**
+        //jar upor click korbo, se delete hoye jabe
+        var items = document.getElementsByClassName('item');
+        for (let i = 0; i < items.length; i++) {
+            var item = items[i];
+            //console.log(item); inspcct diye pawa jay kina, ta sure hobar jonno ai console.log ta kora hoise
+
+            item.addEventListener('click', function (event) {
+                //console.log(event.target.parentNode);
+                //jar upore click korbo tar parentNode ta k, show korbe
+
+                //er parentNode theke jar upore target kore click korbe seta remove hoye jabe
+                event.target.parentNode.removeChild(event.target);
+            })
+
+        }
+
+        */
+
+        //button a click korle, new li banabo, text add korbo & oi j parent ase- tar vitore child hisebe add kore dibo
+        document.getElementById('addNew').addEventListener('click', function (event) {
+            var itemParent = document.getElementById('myList');
+            var newItem = document.createElement('li');
+            newItem.innerText = 'Brand New Item';
+            itemParent.appendChild(newItem);
+        })
+
+        //akhon jakei add kori takeo sorano jabe
+        document.getElementById('myList').addEventListener('click', function (event) {
+            event.target.parentNode.removeChild(event.target);
+        })
+        
+    </script>
+</body>
+
+</html>
