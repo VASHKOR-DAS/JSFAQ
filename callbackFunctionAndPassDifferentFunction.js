@@ -20,4 +20,3 @@ function scrollingFacebook() {
 explain_callback('Joy', 17, washHand);
 explain_callback('Bijoy', 20, takeShower);
 explain_callback('Joya', 22, scrollingFacebook);
-
