@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Events Management</title>
+</head>
+<body>
+
+    <h1 onclick="console.log('Programmer')">Exploreing Event</h1>
+    <!-- ata inspact diye console.log a run hobe -->
+
+
+    <button onclick="alert(47)">Click me</button>
+    <!-- button a click korle alert show hobe -->
+
+    <button onclick="handlerClick()">Click me 2</button>
+    
+    <button onmousemove="hover()">Click me 3</button>
+
+    <button onmouseout="hover2()">Click me 4</button>
+
+    <button onclick="date()">Date</button>
+
+
+
+
+    <!-- reasonable way -->
+    <script>
+
+        function handlerClick() {
+            console.log('Someone Clicked me');
+        }
+        
+
+        function hover() {
+            console.log('on hover');
+        }
+
+        function hover2() {
+            console.log('Amk chere jeona');
+        }
+        //jokhon mouse touch kore chole jabe tokhon function kaj korbe
+
+        function date() {
+            console.log(Date());
+        }
+
+
+
+
+
+    </script>
+    
+
+</body>
+</html>
